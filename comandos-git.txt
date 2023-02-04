@@ -1,0 +1,78 @@
+#Item 1 Crea una copia del repositorio existente en GitHub
+git clone https://github.com/PabloB2G/umafactorial.git
+#Item 2 Antes de hacer un commit hay que hacer un add de los archivos modificados  
+git add factorial.java
+#Item 3 Los cambios realizados se actualizan en el repositorio
+git commit –m “implementacion inicial”
+#Item 4 Se actualiza el archivo
+git add factorial.java
+#Item 5 Se actualiza el repositorio
+git commit –m “refactorizacion"
+#Item 6 Actualiza el repositorio remoto con la rama main
+git push origin main 
+#Item 7 Crea la rama recursivo y se pone en ella
+git checkout -b recursivo 
+#Item 8 Se actualiza el archivo
+git add factorial.java
+#Item 9 Se actualiza el repositorio
+git commit –m “implementacion recursiva”
+#Item 10 Actualiza el repositorio remoto con la rama recursivo
+git push origin recursivo
+#Item 11 Cambia a la rama main
+git checkout main
+#Item 12 Actualiza el archivo
+git add factorial.java
+#Item 13 Actualiza el repositorio local
+git commit –m “correcion numeros negativos”
+#Item 14 Actualiza el repositorio remoto con la rama main
+git push origin main
+#Item 15 Cambia a la rama recursivo
+git checkout recursivo
+#Item 16 Actualiza el archivo
+git add factorial.java
+#Item 17 Actualiza el repositorio local
+git commit –m "optimizacion”
+#Item 18 Cambia a la rama main
+git checkout main
+#Item 19 Mezcla los archivos de las ramas main (actual) y recursivo. Como no hay conflictos no hay problema
+git merge recursivo
+#Item 20 Crea la rama refacIO y se cambia a ella
+git checkout -b refacIO
+#Item 21 Actualiza el archivo
+git add factorial.java
+#Item 22 Actualiza el repositorio local
+git commit -m "refactorizacion de metodo de entrada"
+#Item 23 Al no poder hacer commit de los cambios se guardan en memoria local
+git stash
+#Item 24 Cambia a la rama main
+git checkout main
+#Item 25 Actualiza el archivo
+git add factorial.java
+#Item 26 Actualiza el repositorio local
+git commit -m "cambio de long a BigInteger"
+#Item 27 Actualiza el repositorio remoto con la rama main
+git push origin main
+#Item 28 Cambia a la rama refacIO
+git checkout refacIO
+#Item 29 Carga los cambios que estaban guardados en memoria local
+git stash pop
+#Item 30 Actualiza el archivo
+git add factorial.java
+#Item 31 Actualiza el repositorio local
+git commit -m "refactorizacion de metodo de salida"
+#Item 32 Cambia a la rama main
+git checkout main
+#Item 33 Intentar fusionar las ramas main y refacIO pero como hay conflictos hay que arreglarlo manualmente.
+git merge refacIO
+#Item 34 Se actualiza el archivo
+git add factorial.java
+#Item 35 Se actualiza el repositorio local
+git commit -m "mezcla de rama refacIO"
+#Item 36 Actualiza el repositorio remoto con la rama main
+git push origin main
+#Item 37 Actualiza el nuevo archivo
+git add comandos-git.txt
+#Item 38 Actualiza el repositorio local
+git commit -m "adicion de historial de linea de comandos"
+#Item 39 Actualiza el repositorio remoto con todo el repositorio local
+git push --all origin
